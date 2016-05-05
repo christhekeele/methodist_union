@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1 class="page-title">Listing Deaths</h1>
+<h1>DEATH HUB</h1>
 
 <table class="deaths-table">
   <thead>
@@ -15,9 +15,12 @@
   <tbody>
     <% @deaths.each do |death| %>
       <tr>
-        <td><%= death.date %></td>
+        <td>
+          <% if death.date %>
+            <%= death.date.strftime("%B %e, %Y") %>
+          <% end %>
+        </td>
         <td><%= death.address %></td>
-        <td><%= death.description %></td>
         <td><%= link_to 'Show', death %></td>
         <td><%= link_to 'Edit', edit_death_path(death) %></td>
         <td><%= link_to 'Destroy', death, method: :delete, data: { confirm: 'Are you sure?' } %></td>

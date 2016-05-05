@@ -1,19 +1,26 @@
-<p id="notice"><%= notice %></p>
+<div class="show-page">
 
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Date:</strong>
+    <% if @death.date %>
+      <%= @death.date.strftime("%B %e, %Y") %>
+    <% end %>
+  </p>
+
+  <p>
+    <strong>Address:</strong>
+    <%= @death.address %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= @death.description %>
+  </p>
+
+</div>
 <p>
-  <strong>Date:</strong>
-  <%= @death.date %>
+  <%= link_to 'Edit', edit_death_path(@death) %> |
+  <%= link_to 'Back', deaths_path %>
 </p>
-
-<p>
-  <strong>Address:</strong>
-  <%= @death.address %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @death.description %>
-</p>
-
-<%= link_to 'Edit', edit_death_path(@death) %> |
-<%= link_to 'Back', deaths_path %>

@@ -32,3 +32,36 @@ body {
   margin-left; 3em;
   margin-right: 3em;
 }
+
+ * {
+  font-family: 'Open Sans', sans-serif;
+ }
+
+h1 {
+  text-align: center;
+  color: black;
+  text-shadow: 1px 1px 6px grey;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 4px;
+}
+
+img {
+  position: fixed;
+  z-index: 0;
+}
+
+
+.show-page {
+  background-image: url("tombstone.png");
+  height: 720px;
+  width: 571px;
+}
+
+.show-page p {
+  text-align: center;
+  position: relative;
+  margin-left: 120px;
+  width: 400px;
+  top: 100px;
+}
+>>>>>>> Stashed changes
